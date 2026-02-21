@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neo-orange: #FF4D00;
+  --color-neo-purple: #7E22CE;
+  --color-neo-bg: #F8F9FA;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-neo-bg text-slate-900 antialiased;
+    font-family: var(--font-sans);
+  }
+}
+
+.neo-gradient-purple {
+  background: linear-gradient(135deg, #7E22CE 0%, #9333EA 100%);
+}
+
+.neo-shadow-button {
+  box-shadow: 0 4px 14px 0 rgba(126, 34, 206, 0.39);
+}
+
+.neo-shadow-card {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.05);
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.animate-progress {
+  animation: progress 2s ease-in-out forwards;
+}
+
